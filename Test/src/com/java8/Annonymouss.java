@@ -8,7 +8,7 @@ class Anum{
 }
 public class Annonymouss {
 	public static void main(String[] args) {
-		Anum obj=(int y)->{
+		Anum obj=new Anum(){
 			public void show(int x){
 				System.out.println("welcome after..........."+x);
 			}
