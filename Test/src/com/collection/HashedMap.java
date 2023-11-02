@@ -6,10 +6,10 @@ import java.util.Map;
 //identity hash map use == compare for duplicate key.
 public class HashedMap {
 	public static void main(String[] args) {
-		HashMap<Object,String> obj=new HashMap();
+		HashMap<Object,String> obj=new HashMap<>();
 		obj.put(new Integer(10), "a");
 		obj.put(new Integer(10), "b");
-		System.out.println(obj.size());
+		obj.put(10, "c");
 		for(Map.Entry x:obj.entrySet()){
 			System.out.println(x.getKey()+" "+x.getValue());
 		}

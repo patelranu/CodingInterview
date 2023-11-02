@@ -13,15 +13,7 @@ public class Phone {
 	public String toString() {
 		return "Phone [OS=" + OS + ", name=" + name + ", ram=" + ram + "]";
 	}
-	public void setOS(String oS) {
-		OS = oS;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setRam(String ram) {
-		this.ram = ram;
-	}
+	
 	
 
 }

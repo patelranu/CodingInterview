@@ -1,6 +1,6 @@
 package com.design;
 
-public class PhoneBuilder {
+public class PhoneBuilder  {
 	private String OS;
 	private String name;
 	private String ram;
@@ -18,6 +18,7 @@ public class PhoneBuilder {
 	}
 	
 	public Phone getPhone(){
+		System.out.println("calling builder design");
 		Phone p= new Phone(OS,name,ram);
 		return p;
 	}
