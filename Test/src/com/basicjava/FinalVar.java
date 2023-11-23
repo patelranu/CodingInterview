@@ -1,12 +1,15 @@
 package com.basicjava;
 class Vars{
-	static int x;
-	Vars(){
-		x=7;
-	}
+	final int x=10;
+//	{
+//		x=6;
+//	}
+//	Vars(){
+//		x=7;
+//	}
 	
 	public  void x(){
-		System.out.println("parent....");
+		System.out.println("parent...." +x);
 	}
 };
 class VarsChild extends Vars{

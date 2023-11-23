@@ -1,21 +1,31 @@
 package com.thread;
+//when we create obj of class, then thread-0 is create and its
+//call class using start method.
+//In Interthread, provide lock for method and object also
 class Sum{
 	int add=0;
-	public synchronized void sum(){
+	public synchronized void sum() throws InterruptedException{
+		System.out.println("sum of all :");
 	for(int i=1;i<=10;i++){
 		add=i+add;
+		Thread.sleep(1000);
 	   }this.notify();
 	}
 }
-class CheckInter extends Thread{
+class InterthreadClass extends Thread{
 	Sum obj;
 	
-	public CheckInter(Sum obj) {
+	public InterthreadClass(Sum obj) {
 	   this.obj = obj;
 	}
 
 	public void run(){
-		obj.sum();
+		try {
+			obj.sum();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
@@ -23,13 +33,17 @@ class CheckInter extends Thread{
 public class Interthread {
 	public static void main(String[] args) throws InterruptedException {
 		Sum object=new Sum();
-		CheckInter obj=new CheckInter(object);
+		InterthreadClass obj=new InterthreadClass(object);
+		Thread obj1=new Thread(){
+			public void run(){
+				System.out.println("sum ="+object.add);
+			}
+		};
 		obj.start();
 		synchronized(obj){
 			obj.wait();
-			Thread.sleep(10000);
 		}
-		System.out.println("sum is    "+object.add);
-	}
+		obj1.start();
+}
 
 }

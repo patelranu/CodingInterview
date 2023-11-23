@@ -1,41 +1,32 @@
 package com.thread;
+
 //runnable interface only one method-run
 //if we not implemt run method then main thread run method, is called and this method is empty implementation..
-class MultiD extends Thread{
-	int i=5;
-	{
-		System.out.println(i);
-	}
-	
-}
-class MultiC implements Runnable {
-    @Override
+class RunnableClass implements Runnable {
+	@Override
 	public void run() {
-    	
-    	System.out.println("welcome C");
-	
-   }
+		System.out.println(Thread.currentThread().getName()+" runable child");
+		System.out.println("runnable implementation");
+
+	}
+}
+
+class ThreadClass extends Thread {
+    public void run(){
+    	System.out.println(Thread.currentThread().getName()+" thread child");
+    	System.out.println("thread implementation");
+    }
 }
 
 public class RunableImpl {
-public static void main(String[] args) {
-	MultiC ob=new MultiC();
-	
-	MultiD object=new MultiD();
-	object.start();
-	Thread obj=new Thread(ob);
-	obj.setPriority(10);
-	obj.start();
-	
-	
-		//Thread.sleep(1);
-		System.out.println("welcome main");
-	 /*catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}*/
-	
-	
-}
+	public static void main(String[] args) {
+		Thread.currentThread().setPriority(6);
+		System.out.println(Thread.currentThread().getName());
+		RunnableClass obj =new RunnableClass() ;
+		 new Thread(obj).start();
+         
+        ThreadClass obj1 = new ThreadClass();
+        obj1.start();
+	}
 
 }

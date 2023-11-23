@@ -1,16 +1,19 @@
 package com.thread;
 //remaing capacity=totalsize-totalvalue inside queue
+//remainig capacity means how much value queue can take,
 //size=value inside queue
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class PC{
+public class BlockingQueueMethod{
 	public static void main(String[] args) throws InterruptedException   {
 		int capacity=3;
 		BlockingQueue<Integer> q = new ArrayBlockingQueue<>(capacity);
 		q.put(10);
 		q.put(20);
 		q.put(3);
+		System.out.println(q.size());
+		System.out.println(q.remainingCapacity());
 		System.out.println(q.take());  //first
 		//q.put(5);
 		

@@ -1,8 +1,7 @@
 package com.basicjava;
+//finalize always call at the end of class
 class Finalzer{
-	int a=10;
-	
-	 public void finalize()   
+	public void finalize()   
 	    {   
 	        System.out.println("finalize method called");   
 	    }   
@@ -14,5 +13,6 @@ public static void main(String[] args) {
 	System.out.println(obj.hashCode());
 	obj=null;
 	System.gc();
+	System.out.println("showwww");
 }
 }

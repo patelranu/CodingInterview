@@ -1,4 +1,4 @@
-package com.design;
+package com.designpattern;
 
 public class Phone {
 	private String OS;

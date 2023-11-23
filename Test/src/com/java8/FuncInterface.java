@@ -1,29 +1,31 @@
 package com.java8;
 //an interface have only one abstract method
-//runaaable interface is a function interface
+//runaaable,comaprable interface interface is a function interface
 //lambda expression is used
  interface Func{
+	   final int x=8;
 	void show(int x,int y);
+	default void display(){
+		System.out.println("dispaly default method....");
+	}
+	static void displaystatic(){
+		System.out.println("dispaly static method....");
+	}
+	
  }
- /*class FuncIm implements Func{
-	 public void show(int x){
-		 System.out.println("welcomeeeeeeeeee");
-	 }
- }*/
+
 public interface FuncInterface {
 	public static void main(String[] args) {
-	/*	Func o=new FuncIm();
-		o.show(5);
-	}*/
-		/*Func obj=new Func(){
-			public void show(int x){
-				System.out.println("annonymous....."+x);
-			}
-		};obj.show(7);*/
+
 		Func obj=(int x,int y)->{ x=x*y;
 			  
 				System.out.println("annonymous.....with Lambda...."+x);
 			
-		};obj.show(8,4);
+		};
+		obj.show(8,4);
+		obj.display();
+		
+		System.out.println(obj.x);
+		Func.displaystatic();
 	}
 }

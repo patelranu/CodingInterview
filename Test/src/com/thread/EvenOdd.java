@@ -7,17 +7,17 @@ class PrintEvenOdd{
 		this.total_count=total_count;
 	}
 	
-	public void print(int num){
+	public void print(int threadNumber){
 		synchronized(this){
-			  if(num==0){
+			  if(threadNumber%2==0){
 				  for(int i=2;i<=total_count;i=i+2){
 					  System.out.println(Thread.currentThread().getName()+" "+i); 
-				  }this.notifyAll();
+				  }
 			  } 
-			  if(num!=0){
+			  if(threadNumber%2!=0){
 				  for(int i=1;i<=total_count;i=i+2){
 					  System.out.println(Thread.currentThread().getName()+" "+i); 
-				  }this.notifyAll();
+				  }
 			  } 
 			  
 		}
@@ -25,20 +25,20 @@ class PrintEvenOdd{
 	}
 }
 
-class ThreadA implements Runnable{
+class ThreadA extends Thread{
 	PrintEvenOdd obj;
-	int num;
+	int threadNumber;
 
-	public ThreadA(PrintEvenOdd obj,int num) {
+	public ThreadA(PrintEvenOdd obj,int threadNumber) {
 		this.obj=obj;
-		this.num=num;
+		this.threadNumber=threadNumber;
 	}
 
 	
 
 	@Override
 	public void run() {
-		obj.print(num);
+		obj.print(threadNumber);
 	}
 	
 }
@@ -48,7 +48,7 @@ public class EvenOdd {
 		int total_count=10;
 		PrintEvenOdd obj=new PrintEvenOdd(total_thread,total_count);
 		for(int i=1;i<=total_thread;i++)
-			new Thread(new ThreadA(obj,i%total_thread),"thread-"+i).start() ;
+			new ThreadA(obj,i).start() ;
 	}
 
 }

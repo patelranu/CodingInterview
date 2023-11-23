@@ -6,9 +6,11 @@ public class Test1 extends Exception {
 	}
 	
 
+
 	public Test1() {
 		
 	}
+
 
 
 	public static void main(String[] args) {

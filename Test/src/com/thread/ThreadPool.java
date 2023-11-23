@@ -1,46 +1,40 @@
 package com.thread;
 
-import java.util.Random;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-class MyThread implements Runnable{
-	int i;
-	MyThread(int i){
-		this.i=i;
+
+class MyThread extends Thread {
+	String message;
+
+	MyThread(String string) {
+		this.message = string;
 	}
-	public void  run(){
-		System.out.println("start   "+i);
+
+	public void run() {
+		System.out.println(Thread.currentThread().getName());
+		System.out.println("start thread= "+Thread.currentThread().getName() + message);
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("end   "+i);
+		System.out.println("end thread = "+Thread.currentThread().getName() + message);
 	}
 }
 
-class X implements Callable<Integer>{
 
-	@Override
-	public Integer call() throws Exception {
-		System.out.println("start");
-		Random random=new Random();
-		 int time=random.nextInt(3000);
-		Thread.sleep(time);
-		return time;
-	}
-	
-}
 
 public class ThreadPool {
 	public static void main(String[] args) {
-		ExecutorService pool= Executors.newFixedThreadPool(2);
-		   for(int i=1;i<=5;i++){
-			   pool.execute(new Thread(new MyThread(i)));
-		   }
-		   pool.shutdown();
+		ExecutorService pool = Executors.newFixedThreadPool(3);
+		for (int task = 1; task <= 5; task++) {
+			pool.execute(new MyThread(" message= "+ "task" +task));
+		}
+		pool.shutdown();
+
+		}
 	}
 	
-}
+	
+
+

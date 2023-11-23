@@ -4,7 +4,7 @@ class Calculation{
 		System.out.println("welcome to application..."+name);
 	}
 	public synchronized void getdata(String name){
-		System.out.println("hello"+name);
+		System.out.println("hello "+name);
 	}
 }
 

@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designprogram;
 
 public class CharConvert {
 	public static void main(String[] args) {

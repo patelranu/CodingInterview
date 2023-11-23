@@ -1,6 +1,7 @@
 package com.basicjava;
 
-//The final local variable x cannot be assigned. It must be blank and not using a compound assignment
+//The final local variable x cannot be assigned.
+//It must be blank and not using a compound assignment
 
 public class StaticsMethod {
 	public static void main(String[] args) {

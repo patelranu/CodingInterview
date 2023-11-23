@@ -12,9 +12,9 @@ abstract class B{
 	 }
  }
  class C extends B implements A{
-	 public void show(){
-		 System.out.println("main c class");
-	 }
+//	 public void show(){
+//		 System.out.println("main c class");
+//	 }
  }
 
 public class FunctionalInt {

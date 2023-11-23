@@ -16,7 +16,7 @@ class A implements AutoCloseable{
 	public int  show(){
 		int a=10;
 		if(a==10){
-			throw new ShowError("a is not grater than.....");
+			throw new ShowError("a is not grater than....."+this.hashCode());
 		}else
 			return a;
 		
@@ -24,7 +24,7 @@ class A implements AutoCloseable{
 
 	@Override
 	public void close() throws Exception {
-		System.out.println("close");
+		System.out.println("close"+this.hashCode());
 		
 	}
 	

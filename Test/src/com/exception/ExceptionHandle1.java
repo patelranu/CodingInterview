@@ -10,16 +10,18 @@ public class ExceptionHandle1 {
 		}finally{
 			System.out.println("main finally block");
 		}
+		System.out.println("after final..........main");
 	}
 
 	private static void errorMethod() {
 		try{
 			int a=10/0;
-		}/*catch(RuntimeException e){
+		}catch(RuntimeException e){
 			System.out.println("inside error method....");
-		}*/finally{
+		}finally{
 			System.out.println("end of error method....");
 		}
+		System.out.println("after final..........method");
 		
 	}
 

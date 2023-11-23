@@ -2,62 +2,57 @@ package com.thread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-class Produce implements Runnable {
+
+class Produce extends Thread {
 	BlockingQueue<String> queue;
+
 	public Produce(BlockingQueue<String> queue) {
-		this.queue=queue;
+		this.queue = queue;
 	}
-       @Override
+    
+	@Override
 	public void run() {
-    	   int i=1;
-    	try{
-			while(i<=5){
-				  queue.put(i+"");
-				  System.out.println("Produce "+i);
-				  i++;
-				  Thread.sleep(10000);
-				}	
-				
-		}catch(Exception e){
+		int i = 1;
+		try {
+			while (i <= 5) {
+				queue.put(i+"");
+				System.out.println("produce : "+i);
+				i++;
+			}
+		} catch (Exception e) {
 			e.getStackTrace();
 		}
 	}
-
 }
-class Consume implements Runnable {
+
+class Consume extends Thread {
 	BlockingQueue<String> queue;
+   
 	public Consume(BlockingQueue<String> queue) {
-		this.queue=queue;
+		this.queue = queue;
 	}
 	@Override
 	public void run() {
-		//System.out.println("Consume");
-		 try {
-				while(true){
-					 System.out.println("Consume" +queue.take());
-				}
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		try {
+			
+			while (true) {
+				System.out.println("Consume  : " + queue.take());
+				Thread.sleep(1000);
 			}
+		} catch (InterruptedException e) {
+          e.printStackTrace();
 		}
-		
 	}
-
-
+}
 
 public class ProducerConsumer {
 	public static void main(String[] args) throws InterruptedException {
 		BlockingQueue<String> num = new ArrayBlockingQueue<>(3);
-		Produce p=new Produce(num);
-		Consume c=new Consume(num);
+		Produce p = new Produce(num);
+		Consume c = new Consume(num);
 		new Thread(p).start();
-	    new Thread(c).start();
-		
-		
-		
-		
-	
+		new Thread(c).start();
+
 	}
-	
+
 }

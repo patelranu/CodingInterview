@@ -11,7 +11,7 @@ class B {
 		System.out.println("b");
 	}
 }
-class C extends B implements A{
+class C extends B implements A {
 }
 public class Mutiple {
  public static void main(String[] args){

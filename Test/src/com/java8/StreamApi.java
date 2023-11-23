@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 // map operation is used where we perform some operation in values 
 //filter is use where we not perform and modification....
 
+import com.collection.Comparators;
+
 //if we applying foreach after filter without collect then it directly display value...
 
 public class StreamApi {
@@ -37,6 +39,8 @@ public static void main(String[] args) {
    //convert list to set
    
    Set s= obj.stream().collect(Collectors.toSet());
+   List<String> obj1= obj.stream().collect(Collectors.toList());
+  
    System.out.println(s);
 }
 }

@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 //obj1<obj2== if after positive, before negative
 //asce obj1 >obj2 (positive)
+//obj1.compareTo(Obj2) 
+//if onj1 comes before obj2 then +(means obj is greatr then obj2 asce)
+//if obj1 comes before obj2 then -neg
 
 class Employee implements Comparable<Employee>{
 	int id;
@@ -17,10 +20,10 @@ class Employee implements Comparable<Employee>{
 	@Override
 	//1,2,3,4
 	public int compareTo(Employee o) {
-		if(id<o.id)   //(2,1)
-			return 1;
-		else if(id>o.id)
+		if(id>o.id)   //(2,1)
 			return -1;
+		else if(id<o.id)
+			return 1;
 		else 
 			return 0;
 		
@@ -36,6 +39,11 @@ public class Compare {
 		obj.add(new Employee(0,"anju"));
 		
 		Collections.sort(obj);
+		for(Employee o:obj){
+			System.out.println(o.id +" "+o.name);
+		}
+		System.out.println(";;;;;;;;;;;;;;");
+		Collections.sort(obj,(i1,i2)->i1.compareTo(i2));
 		for(Employee o:obj){
 			System.out.println(o.id +" "+o.name);
 		}

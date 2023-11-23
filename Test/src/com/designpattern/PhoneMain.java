@@ -1,4 +1,4 @@
-package com.design;
+package com.designpattern;
 
 public class PhoneMain {
   public static void main(String[] args) {

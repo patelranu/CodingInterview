@@ -24,7 +24,7 @@ public class WhileLoop {
 		do{
 			System.out.println("hello");
 			j++;
-		}while(j<=1);
+		}while(j<1);
 		
 			
 	}

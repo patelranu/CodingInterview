@@ -1,4 +1,4 @@
-package com.designpattern;
+package com.designprogram;
 
 public class CharPrint {
 	public static void main(String[] args) {

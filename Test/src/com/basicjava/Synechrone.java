@@ -3,7 +3,7 @@ package com.basicjava;
  //if we call from child class object.
 // in Func overloading always parameeter should be different, 
 
-class Overload{
+class ClassA{
 	int show(){
 		System.out.println("int show");
 		return 0;
@@ -15,7 +15,7 @@ class Overload{
 		System.out.println("static parent");
 	}
 }
-class OverloadParent extends Overload{
+class ClassB extends ClassA{
 	static void methodcall(){
 		System.out.println("child");
 	}
@@ -27,7 +27,7 @@ class OverloadParent extends Overload{
 
 public class Synechrone {
 	public static void main(String[] args) {
-		Overload obj=new OverloadParent();
+		ClassA obj=new ClassB();
      obj.methodcall();
 		obj.show(5);
 	}

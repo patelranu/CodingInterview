@@ -1,4 +1,4 @@
-package com.design;
+package com.designpattern;
 
 public class SingletonObject {
 
@@ -13,6 +13,7 @@ public class SingletonObject {
 		synchronized (SingletonObject.class) {
 			if (obj == null) {
 				obj = new SingletonObject();
+				
 			}
 			return obj;
 		}

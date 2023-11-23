@@ -1,5 +1,5 @@
 package com.basicjava;
-
+//clonable is markert interface
 class Cab implements Cloneable{
 	int x=6;
 

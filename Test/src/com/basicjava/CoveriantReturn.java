@@ -1,8 +1,14 @@
 package com.basicjava;
 class CovA{
+	CovA(){
+		System.out.println("CovA const");
+	}
 	
 }
 class CovB extends CovA{
+	CovB(){
+		System.out.println("CovB const");
+	}
 	
 }
 class Base{

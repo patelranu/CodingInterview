@@ -2,7 +2,7 @@ package com.thread;
 
 class Multiplication{
 	public  void matrix(int x) {
-		System.out.println("ssdsj......"+Thread.currentThread().getName());
+		System.out.println("current thread......"+Thread.currentThread().getName());
 		synchronized(this){
 			System.out.println(Thread.currentThread().getName());
 		for(int i=1;i<=5;i++){

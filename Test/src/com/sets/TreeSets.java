@@ -1,5 +1,9 @@
 package com.sets;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.TreeSet;
 //asce order ,null not allow ,throw nullpointer exception to put null
 public class TreeSets {
@@ -12,12 +16,23 @@ public class TreeSets {
 		obj.add(20);
 		obj.add(15);
 		System.out.println(obj.first());
+		
 		System.out.println(obj.pollFirst());
+		
 		System.out.println(obj.pollLast());
+		
 		System.out.println(obj.tailSet(12,false));
-		/*for(Object o:obj){
+		System.out.println(";;;;;;;;;;;;;;;;;;;;");
+		for(Object o:obj){
+			System.out.println(o);
+			}
+		System.out.println(";;;;;;;;;;;;;;;;;;;;");
+		for(Object o:obj){
 		System.out.println(o);
-		}*/
+		}
+		List<Integer>i=new ArrayList<>(obj);
+		
+		Collections.sort(i,new MyComparator());
 	}
 
 }

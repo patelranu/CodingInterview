@@ -6,7 +6,7 @@ import java.util.Iterator;
 //removeif
 //set get- set and add both are same
 
-public class ListTest {
+public class ArrayListTest {
 	public static void main(String[] args) {
 		ArrayList<Integer>list=new ArrayList<>();
 		list.add(1);

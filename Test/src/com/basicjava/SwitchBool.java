@@ -1,5 +1,5 @@
 package com.basicjava;
-class BooleanInt{
+class BooleanClass{
 	public static int toInteger(boolean val){
 		
 		return val?1:0;
@@ -11,7 +11,7 @@ class BooleanInt{
 public class SwitchBool {
 	public static void main(String[] args) {
 		boolean x=false;
-		switch(BooleanInt.toInteger(x)){
+		switch(BooleanClass.toInteger(x)){
 		case 1:
 			System.out.println("yeas true");
 		case 0:

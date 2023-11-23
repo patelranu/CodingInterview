@@ -1,4 +1,6 @@
 package com.basicjava;
+//if we define lambda expression then that interface should be 
+//funtional interface
 interface Anno{
 	int show(int x,int y);
 }

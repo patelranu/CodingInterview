@@ -9,12 +9,12 @@ package com.basicjava;
 //2 cases can not be same, otherwise compile exception
 public class Switches {
 	public static void main(String[] args) {
-		int val=4;
+		int val=7;
 		switch(val){
 		
 		case 4:
 			System.out.println("val 4");
-			//break;
+			break;
 		
 		case 7:
 			System.out.println("val 5");
