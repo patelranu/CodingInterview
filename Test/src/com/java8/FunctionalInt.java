@@ -19,7 +19,7 @@ abstract class B{
 
 public class FunctionalInt {
 	public static void main(String[] args) {
-		B obj=new C();
+		A obj=new C();
 		obj.show();
 	}
 

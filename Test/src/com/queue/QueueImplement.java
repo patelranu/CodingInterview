@@ -52,7 +52,7 @@ class QueList{
 		
 	}
 }
-public class QList {
+public class QueueImplement {
 	public static void main(String[] args) {
 		QueList obj=new QueList();
 		obj.enQue(10);

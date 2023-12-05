@@ -1,4 +1,4 @@
-package com.basiclogic;
+package com.basicjava;
 
 public class ValOF {
 	public static void main(String[] args) {

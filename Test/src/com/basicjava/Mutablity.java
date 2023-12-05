@@ -1,5 +1,5 @@
 package com.basicjava;
-//final class, final variable , getter, constructor
+//final class, final variable , getter, public constructor
 
 final class Mute{
 	private final int x;
@@ -21,5 +21,5 @@ public class Mutablity {
 		obj=new Mute(8);
 		System.out.println(obj.getX());
 		System.out.println(obj.hashCode());
-	}
+			}
 }

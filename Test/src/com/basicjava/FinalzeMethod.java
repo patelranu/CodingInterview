@@ -7,7 +7,7 @@ class Finalzer{
 	    }   
 }
 
-public class Finalze {
+public class FinalzeMethod {
 public static void main(String[] args) {
 	Finalzer obj=new Finalzer();
 	System.out.println(obj.hashCode());

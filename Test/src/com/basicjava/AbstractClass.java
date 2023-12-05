@@ -1,9 +1,11 @@
 package com.basicjava;
-//static method can not be override...no compliation error but alway call parent 
+//static method can not be override...no compliation error but always call parent
+//method override- normal method override
+//method hide- even child object create but method parent is call
 abstract class Parent {
 	abstract void draw();
 
-	Parent() {
+	 Parent() {
 		System.out.println("parents");
 	}
 

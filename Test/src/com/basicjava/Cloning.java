@@ -1,5 +1,7 @@
 package com.basicjava;
 //clonable is markert interface
+//shallow copy-reference
+//deep copy- clone
 class Cab implements Cloneable{
 	int x=6;
 
@@ -10,6 +12,7 @@ public Object clone() throws CloneNotSupportedException{
 public class Cloning {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Cab obj=new Cab();
+		
 		Cab ob=obj;
 		ob.x=9;
 	    Cab c=(Cab)obj.clone();

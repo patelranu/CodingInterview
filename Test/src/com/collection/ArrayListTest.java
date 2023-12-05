@@ -1,10 +1,13 @@
 package com.collection;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 //add,addAll(ListObject).addAll(index,Object)
 //remove(index),removeAll(ListObject),clear
 //removeif
 //set get- set and add both are same
+//internal implements - array
+import java.util.stream.Stream;
 
 public class ArrayListTest {
 	public static void main(String[] args) {
@@ -15,6 +18,7 @@ public class ArrayListTest {
 		list.add(7);
 		list.add(9);
 		list.set(1, 100);
+		list.removeIf(value->value%2==0);
 		list.removeIf(value->value.equals(7));
 		list.add(1, 10);
 		//list.remove(0);
@@ -30,8 +34,10 @@ public class ArrayListTest {
 		System.out.println(it.next());
 	}
 	System.out.println("Lamda expression.........");
-	//list.forEach(i->System.out.println(i));
-		
+	list.forEach(i->System.out.println(i));
+	System.out.println("stream expression.........");
+	list.stream().sorted().forEach(i->System.out.println(i));
+		//System.out.println(i.toString());
 		
 	}
 

@@ -4,13 +4,13 @@ package com.thread;
 //sleep, change thread name
 //thread scheduler is a part of JVM ,so we can not predict exact output...
 //if we call direct run method then no new thread is created..only one thread is available.
-class MultiB extends Thread{
+class MultiA extends Thread{
 	public void run(){
-		//Thread.currentThread().setName("thread B");
-		System.out.println(Thread.currentThread().getName());
-		for(int i =0;i<5;i++){
+	  Thread.currentThread().setName("thread A");
+	  System.out.println(Thread.currentThread().getName());
+		for(int i =0;i<2;i++){
 			try {
-				System.out.println("welcome B class");
+				System.out.println("Enter welcome A class");
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -20,13 +20,13 @@ class MultiB extends Thread{
 	}
 	
 }
-class MultiA extends Thread{
+class MultiB extends Thread{
 	public void run(){
-	  //Thread.currentThread().setName("thread A");
-	  System.out.println(Thread.currentThread().getName());
-		for(int i =0;i<5;i++){
+		Thread.currentThread().setName("thread B");
+		System.out.println(Thread.currentThread().getName());
+		for(int i =0;i<2;i++){
 			try {
-				System.out.println("welcome A class");
+				System.out.println("Enter welcome B class");
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -37,9 +37,10 @@ class MultiA extends Thread{
 	
 }
 
-public class ThreadImpl {
+
+public class FirstThreadImpl {
 	public static void main(String[] args) {
-	   Thread.currentThread().setName("main thread");
+	   Thread.currentThread().setName("main thread.......");
 	   System.out.println(Thread.currentThread().getName());
 		MultiA obj=new MultiA();
 		MultiB objb=new MultiB();

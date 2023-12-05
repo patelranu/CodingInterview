@@ -12,10 +12,11 @@ class Finalize{
 public class FinalizeMethod {
 	public static void main(String[] args) {
 		Finalize obj=new Finalize();
-		System.gc();
+		
 	    obj=null;
-	    System.out.println("end of application");
 	    System.gc();
+	    System.out.println("end of application");
+	    //System.gc();
 	}
 
 }

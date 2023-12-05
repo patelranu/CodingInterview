@@ -1,36 +1,31 @@
 package com.collection;
-
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-//hash Map check duplicate key by equal method
-//identity hash map use == compare for duplicate key.
+import com.interview.Employe;
+
 public class HashedMap {
 	public static void main(String[] args) {
-//		HashMap<Object,String> obj=new HashMap<>();
-//		obj.put(new Integer(10), "a");
-//		obj.put(new Integer(10), "b");
-//		obj.put(10, "c");
-//		for(Map.Entry x:obj.entrySet()){
-//			System.out.println(x.getKey()+" "+x.getValue());
-//		}
+//		HashMap<Integer, String> map = new HashMap<>();
+//		map.put(1, "ranu");
+//		map.put(4, "preeti");
+//		map.put(2, "ruby");
+//		map.put(5, "bro");
+//		map.entrySet().stream()
+//		.sorted()
+//		.forEach(i -> System.out.println(i.getKey() + "" + i.getValue()));
+//
+//		map.entrySet().stream()
+//		.sorted(Map.Entry.comparingByKey(Comparator.naturalOrder()))
+//				.forEach(System.out::println);
 		
-		HashMap<Integer,String> map=new HashMap<>();
-		map.put(1, "ranu");
-		map.put(4, "preeti");
-		map.put(2, "ruby");
-		map.put(5, "bro");
+		HashMap<Employe,String> emp=new HashMap<>();
+		emp.put(new Employe(1,"ranu1",20,2000), "ranu");
+		emp.put(new Employe(1,"ranu1",20,2000), "rash");
 		
-	for(Map.Entry<Integer,String> m:map.entrySet()){
-		System.out.println(m.getKey() +" "+m.getValue());
-	}
-	
-	//map.entrySet().stream().sorted();
-	
-	map.entrySet().stream()
-	.sorted(Map.Entry.comparingByKey(Comparator.reverseOrder()))
-	.forEach(System.out::println);    
-	
+		System.out.println(emp.size());
+		System.out.println(emp.toString());
+		
 	}
 
 }

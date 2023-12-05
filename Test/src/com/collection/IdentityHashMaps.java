@@ -14,7 +14,8 @@ public class IdentityHashMaps {
 		map.put(1, "a");
 		map.put(2, "b");
 		map.put(new Integer(1), "c");
-		System.out.println("size of identity hashmap :" +map.size());
+		map.put(1, "d");
+		System.out.println("size of identity hashmap : " +map.size());
 		for(Map.Entry<Integer, String> x:map.entrySet()){
 			System.out.println( x.getKey()+" "+x.getValue());
 		}
@@ -24,6 +25,7 @@ public class IdentityHashMaps {
 		map1.put(1, "a");
 		map1.put(2, "b");
 		map1.put(new Integer(1), "c");
+		map1.put(new Integer(1), "d");
 		System.out.println("size of hashmap :"+map1.size());
 		for(Map.Entry<Integer, String> x:map1.entrySet()){
 			System.out.println( x.getKey()+" "+x.getValue());

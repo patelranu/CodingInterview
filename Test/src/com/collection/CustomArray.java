@@ -5,20 +5,20 @@ import java.util.Arrays;
 
 public class CustomArray<E> {
 	int size;
-	Integer[] element;
+	Integer[] array;
 	int Default_size=5;
 	public CustomArray() {
 		size=0;
-		element=new Integer[Default_size];
+		array=new Integer[Default_size];
 	}
 	public void add(int value) {
 		if(size==Default_size)
 			createNewSize();
-		element[size++]=value;
+		array[size++]=value;
 	}
 	private void createNewSize() {
 		int new_size=Default_size*2;
-		element=Arrays.copyOf(element, new_size);
+		array=Arrays.copyOf(array, new_size);
 	}
 	public int size() {
 		return size;
@@ -32,13 +32,13 @@ public class CustomArray<E> {
 	}
 	private int get(int index) {
 		if(index<size)
-		return element[index];
+		return array[index];
 		else 
 			throw new  ArrayIndexOutOfBoundsException();
 	}
 	public void delete(int index) {
 		while(index<size-1){
-			element[index]=element[index+1];
+			array[index]=array[index+1];
 			index++;
 		}
 		//element[index]=null;

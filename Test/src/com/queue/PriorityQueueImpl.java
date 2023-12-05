@@ -1,10 +1,11 @@
 package com.queue;
 
 import java.util.PriorityQueue;
+
 //ascs order print, FIFO
-//poll and remove both are same
-//peek and element both are same
-public class CollectionQueue {
+//poll and remove both are same(removed)
+//peek and element both are same(only element show)
+public class PriorityQueueImpl {
 	public static void main(String[] args) {
 		PriorityQueue que=new PriorityQueue();
 		que.add("ranu");

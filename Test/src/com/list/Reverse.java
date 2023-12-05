@@ -55,6 +55,7 @@ public class Reverse {
 	    obj.insertAtEnd(3);
 		obj.insertAtEnd(4);
 		obj.insertAtEnd(5);
+		obj.insertAtEnd(6);
 		obj.displayrecord();
 		System.out.println("reverse list........");
 		obj.reverselist();

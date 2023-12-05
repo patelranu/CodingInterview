@@ -10,10 +10,16 @@ class MultiplicationThread extends Thread {
 	}
 
 	public void run() {
+		//synech class
 		synchronized (Operation.class) {
 			System.out.println(Thread.currentThread().getName());
 			obj.multiplication(val);
 		}
+		//object synech
+//		System.out.println(Thread.currentThread().getName());
+//		synchronized(this){
+//			obj.multiplication(val);
+//		}
 	}
 }
 

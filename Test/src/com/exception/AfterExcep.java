@@ -19,25 +19,25 @@ public class AfterExcep {
 	}
 
 	private static void call(int a) {
-//		try {
-//
-//			System.out.println("after call  method line");
-//			System.out.println(a / 0);
-//		}finally {
-//			System.out.println("call finally........");
-//		}
-//		System.out.println("after final remaing line of ........@@@");
-
 		try {
 
-			System.out.println("after call line");
+			System.out.println("after call  method line");
 			System.out.println(a / 0);
-		} catch (Exception e) {
-			System.out.println("call exception handle ..." + e);
-		} finally {
-			System.out.println("call final........");
+		}finally {
+			System.out.println("call finally........");
 		}
 		System.out.println("after final remaing line of ........@@@");
+
+//		try {
+//
+//			System.out.println("after call line");
+//			System.out.println(a / 0);
+//		} catch (Exception e) {
+//			System.out.println("call exception handle ..." + e);
+//		} finally {
+//			System.out.println("call final........");
+//		}
+//		System.out.println("after final remaing line of ........@@@");
 	}
 
 }

@@ -4,11 +4,11 @@ package com.thread;
 //In Interthread, provide lock for method and object also
 class Sum{
 	int add=0;
-	public synchronized void sum() throws InterruptedException{
+	public synchronized void sum(){
 		System.out.println("sum of all :");
 	for(int i=1;i<=10;i++){
 		add=i+add;
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 	   }this.notify();
 	}
 }
@@ -20,18 +20,14 @@ class InterthreadClass extends Thread{
 	}
 
 	public void run(){
-		try {
-			obj.sum();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		obj.sum();
+		
 	}
 	
 }
 
 public class Interthread {
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException{
 		Sum object=new Sum();
 		InterthreadClass obj=new InterthreadClass(object);
 		Thread obj1=new Thread(){
@@ -40,10 +36,11 @@ public class Interthread {
 			}
 		};
 		obj.start();
-		synchronized(obj){
+	 synchronized(obj){
 			obj.wait();
 		}
+	 
 		obj1.start();
-}
-
+		
+	}
 }

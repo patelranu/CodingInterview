@@ -8,12 +8,17 @@ interface LambdaClass{
 	default void display(){
 		System.out.println("default implement");
 	}
+	static void staticMethod(){
+		System.out.println("static implement");
+	}
+
 	String toString();
 	
 }
 
 public class FuncLambda {
 	public static void main(String[] args) {
+		LambdaClass.staticMethod();
 		LambdaClass obj=()->{
 			System.out.println("show method implement");
 			
@@ -21,6 +26,7 @@ public class FuncLambda {
 		
 		obj.show();
 		obj.display();
+		
 		
 		
 	}

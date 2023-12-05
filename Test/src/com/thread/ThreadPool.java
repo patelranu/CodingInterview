@@ -11,14 +11,14 @@ class MyThread extends Thread {
 	}
 
 	public void run() {
-		System.out.println(Thread.currentThread().getName());
 		System.out.println("start thread= "+Thread.currentThread().getName() + message);
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		System.out.println("end thread = "+Thread.currentThread().getName() + message);
+	   
 	}
 }
 
@@ -26,7 +26,7 @@ class MyThread extends Thread {
 
 public class ThreadPool {
 	public static void main(String[] args) {
-		ExecutorService pool = Executors.newFixedThreadPool(3);
+		ExecutorService pool = Executors.newFixedThreadPool(2);
 		for (int task = 1; task <= 5; task++) {
 			pool.execute(new MyThread(" message= "+ "task" +task));
 		}

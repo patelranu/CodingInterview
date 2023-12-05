@@ -11,7 +11,7 @@ public class StaticsMethod {
 		System.out.println(x);
 		int z=x;   //unboxing
 		int i=x.intValue();
-		Integer v=Integer.valueOf(5);
+		Integer v=Integer.valueOf(a);
 		
 		
 	}

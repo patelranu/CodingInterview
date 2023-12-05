@@ -19,6 +19,7 @@ public class ArrayList {
 		obj.show();
 		System.out.println(obj.size()+".................");
 		
+		
 	}
 
 }

@@ -28,10 +28,11 @@ class StackQueue{
 		
 	}
 	public void display() {
-		System.out.println("display result...........");
-	   while(!s1.empty()){
-		   System.out.println( s1.pop());
+		System.out.println(s1.size() +"display result...........");
+	 for(int i=s1.size()-1;i>=0;i--){
+		System.out.println(s1.get(i));	
 	 }
+	  
   }
 }
 public class QueStack {

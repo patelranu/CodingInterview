@@ -25,7 +25,7 @@ class ClassB extends ClassA{
 	}
 }
 
-public class Synechrone {
+public class FunctionOverload {
 	public static void main(String[] args) {
 		ClassA obj=new ClassB();
      obj.methodcall();
