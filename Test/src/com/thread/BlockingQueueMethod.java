@@ -13,8 +13,8 @@ public class BlockingQueueMethod{
 		BlockingQueue<Integer> q = new LinkedBlockingQueue<>(capacity);
 		q.put(10);
 		q.put(20);
-		q.put(3);
-		
+		//q.put(3);
+	
 		System.out.println("filled size " +q.size());
 		System.out.println("remaingcapacity "+q.remainingCapacity());
 		System.out.println("pull "+q.take());  //first

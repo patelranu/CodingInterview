@@ -4,8 +4,8 @@ package com.basicjava;
 //static variable take copy of variable and work it take time to reflect the changes on variable.
 class AThread extends Thread {
 
-	// public static boolean run=true;
-	private volatile boolean run = true;
+	 public static boolean run=true;
+	//private volatile boolean run = true;
 
 	public void run() {
 		for (int i = 0; i < 10; i++) {

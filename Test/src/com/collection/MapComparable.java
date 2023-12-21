@@ -29,7 +29,7 @@ public class MapComparable {
 		}
 		System.out.println("sorting ;;;;;;;;");
 		
-		//Collections.sort(list,(i1,i2)->i1.getKey().compareTo(i2.getKey()));
+		Collections.sort(list,(i1,i2)->i1.getKey().compareTo(i2.getKey()));
 		
 		for(Entry<Integer,String>obj:list){
 			System.out.println(obj.getKey() +" "+obj.getValue());

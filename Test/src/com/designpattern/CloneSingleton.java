@@ -22,7 +22,7 @@ class SingletonClone implements Cloneable{
 public class CloneSingleton {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		SingletonClone obj=	SingletonClone.getObject();
-		SingletonClone obj1=	SingletonClone.getObject();
+		SingletonClone obj1=SingletonClone.getObject();
 		SingletonClone obj3=(SingletonClone) obj.clone();
 		System.out.println(obj.hashCode());
 		System.out.println(obj1.hashCode());

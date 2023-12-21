@@ -1,22 +1,26 @@
 package com.designpattern;
-
+//volatile we can use
 public class SingletonObject {
 
-	private static SingletonObject obj; // static and private
+	private volatile static SingletonObject obj; // static and private
 
 	private SingletonObject() {
-		System.out.println("hello");
+		System.out.println("constructor call");
 
 	}
 
+	// duble check
 	public static SingletonObject getInt() {
-		synchronized (SingletonObject.class) {
-			if (obj == null) {
-				obj = new SingletonObject();
-				
+		if (obj == null) {
+			synchronized (SingletonObject.class) {
+				if (obj == null) {
+					obj = new SingletonObject();
+
+				}
 			}
-			return obj;
+
 		}
+		return obj;
 	}
 
 }

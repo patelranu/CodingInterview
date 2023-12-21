@@ -1,8 +1,5 @@
 package com.java8;
 
-import java.util.Arrays;
-import java.util.List;
-
 //interface InterfaceA {
 //	default void show() {
 //		System.out.println("a");
@@ -24,17 +21,17 @@ import java.util.List;
 //
 //		}
 
-
 public class MapFlatMap {
 	public static void main(String[] args) {
-		//ImplementInterface obj=new ImplementInterface();
-		
+		// ImplementInterface obj=new ImplementInterface();
+
 		// list name
 		// output name 5 ,cap
-//		List<String> list = Arrays.asList("ranu","abcde", "rash", "ranupatel", "xyzabcd");
-//		list.stream().filter(value -> value.length() > 5).map(value -> value.toUpperCase())
-//				.forEach(System.out::println);
-}
-	
-	
+		// List<String> list = Arrays.asList("ranu","abcde", "rash",
+		// "ranupatel", "xyzabcd");
+		// list.stream().filter(value -> value.length() > 5).map(value ->
+		// value.toUpperCase())
+		// .forEach(System.out::println);
+	}
+
 }

@@ -17,7 +17,7 @@ public class CustomArray<E> {
 		array[size++]=value;
 	}
 	private void createNewSize() {
-		int new_size=Default_size*2;
+		int new_size=(Default_size*3/2)+1;
 		array=Arrays.copyOf(array, new_size);
 	}
 	public int size() {

@@ -1,5 +1,6 @@
 package com.basicjava;
 //chang state from Java to file supported over the network.
+//serialization break singleton design pattern
 import java.io.FileInputStream;
 
 

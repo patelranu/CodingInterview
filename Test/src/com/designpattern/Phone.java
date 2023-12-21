@@ -14,6 +14,4 @@ public class Phone {
 		return "Phone [OS=" + OS + ", name=" + name + ", ram=" + ram + "]";
 	}
 	
-	
-
 }

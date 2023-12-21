@@ -3,7 +3,7 @@ package com.thread;
 import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.*;
-
+//future and callable both are interface
 public class CallableInt {
 	public static void main(String[] args) {
 		ExecutorService service=Executors.newCachedThreadPool();

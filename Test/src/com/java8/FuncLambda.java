@@ -1,7 +1,7 @@
 package com.java8;
 
 //In functional Interface we have many default implelemtation method but have only one abstract method
-// lambda work only functional interface that have only one method
+//lambda work only functional interface that have only one method
 @FunctionalInterface
 interface LambdaClass{
 	void show();

@@ -2,8 +2,6 @@ package com.basicjava;
 //static variable we can defie in const
 //non static variable we can not define in static block
 //
-
-
 abstract class AB{
 	 static int a;
 	 int x;

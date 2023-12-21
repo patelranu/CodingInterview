@@ -2,6 +2,7 @@ package com.java8;
 //an interface have only one abstract method
 //runaaable,comaprable interface interface is a function interface
 //lambda expression is used
+@FunctionalInterface
  interface Func{
 	   final int x=8;
 	void show(int x,int y);
@@ -13,6 +14,13 @@ package com.java8;
 	}
 	
  }
+
+interface Func2 extends Func{
+	  final int x=9;
+	  default void display(){
+			System.out.println("dispaly  func 2 default method....");
+	}
+}
 
 public interface FuncInterface {
 	public static void main(String[] args) {
@@ -27,5 +35,9 @@ public interface FuncInterface {
 		
 		System.out.println(obj.x);
 		Func.displaystatic();
+		
+		
+		
+		
 	}
 }

@@ -1,5 +1,5 @@
 package com.list;
-
+//implement linked list using stack means insert at begin
 class Linked{
 	Node root;
 	int size;
@@ -7,8 +7,7 @@ class Linked{
 		root=null;
 		size=0;
 	}
-	//implement linked list using stack means insert at begin
-	public void insertAtBegin(int data) {
+		public void insertAtBegin(int data) {
 		Node node=createNode(data);
 		if(root==null)
 			root=node;

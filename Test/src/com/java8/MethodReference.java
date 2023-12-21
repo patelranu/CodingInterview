@@ -2,10 +2,10 @@ package com.java8;
 
 import java.util.Arrays;
 import java.util.List;
-
 //Instread of lambdad expression we can use Method reference
-//forEach internal Consumer funcational interface- accept method
+//Consumer funcational interface- accept method=forEach internal 
 //filter- Predicate funcational interface method test
+//Optional is final class
 class PrintValue{
 	public static void displayStatic(String s){
 		System.out.println(s);

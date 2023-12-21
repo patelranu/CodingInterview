@@ -7,7 +7,7 @@ package com.java8;
 	}
 }
 abstract class B{
-	public  void show(){
+	public void show(){
 		 System.out.println("abstract class");
 	 }
  }
